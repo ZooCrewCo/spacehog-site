@@ -346,8 +346,8 @@
     opacity: 0.7;
   }
   .lightbox-close:hover { opacity: 1; }
-  @media (max-width: 520px) {
-    .screenshots-secondary { grid-template-columns: 1fr; }
+  @media (max-width: 768px) {
+    .screenshots-secondary { grid-template-columns: 1fr !important; }
   }
 
   /* ============ Feature grid ============ */
@@ -640,13 +640,16 @@
       </p>
     </div>
 
-    <!-- Primary screenshot -->
-    <div class="screenshot">
-      <img src="ss_main.png" alt="SpaceHog showing a tree view of folder sizes on the C: drive, with a sidebar listing every drive and its capacity used." />
+    <!-- Walkthrough video -->
+    <div style="margin-bottom:32px;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,0.5);border:1px solid var(--line-strong);aspect-ratio:16/9;">
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qboLSH7VKd0" title="SpaceHog walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:block;"></iframe>
     </div>
 
-    <!-- Secondary screenshots -->
-    <div class="screenshots-secondary">
+    <!-- Screenshots -->
+    <div class="screenshots-secondary" style="grid-template-columns:repeat(3,1fr);">
+      <div class="screenshot-secondary">
+        <img src="ss_main.png" alt="SpaceHog showing a tree view of folder sizes on the C: drive." />
+      </div>
       <div class="screenshot-secondary">
         <img src="ss_settings.png" alt="SpaceHog settings panel showing icon theme options." />
       </div>
